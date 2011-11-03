@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/examdesign
+# catalog-date 2006-12-09 23:51:48 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-examdesign
 Version:	20061209
 Release:	1
@@ -63,6 +69,7 @@ short answer/essay questions.
 #- source
 %doc %{_texmfdistdir}/source/latex/examdesign/examdesign.dtx
 %doc %{_texmfdistdir}/source/latex/examdesign/examdesign.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -73,3 +80,5 @@ short answer/essay questions.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
