@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-examdesign
 Version:	20061209
-Release:	7
+Release:	8
 Summary:	LaTeX class for typesetting exams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/examdesign
