@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-examdesign
-Version:	1.101
+Version:	20170414
 Release:	1
 Summary:	LaTeX class for typesetting exams
 Group:		Publishing
