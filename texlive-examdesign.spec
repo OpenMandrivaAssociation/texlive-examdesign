@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/examdesign
-# catalog-date 2006-12-09 23:51:48 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-examdesign
-Version:	1.101
-Release:	2
+Version:	15878
+Release:	1
 Summary:	LaTeX class for typesetting exams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/examdesign
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ matching, true/false, multiple-choice, fill-in-the-blank, and
 short answer/essay questions.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -62,24 +56,11 @@ short answer/essay questions.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061209-2
-+ Revision: 751672
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061209-1
-+ Revision: 718395
-- texlive-examdesign
-- texlive-examdesign
-- texlive-examdesign
-- texlive-examdesign
-
