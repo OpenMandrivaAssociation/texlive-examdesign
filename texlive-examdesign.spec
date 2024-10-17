@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	LaTeX class for typesetting exams
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/examdesign
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/examdesign
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/examdesign.doc.r%{version}.tar.xz
